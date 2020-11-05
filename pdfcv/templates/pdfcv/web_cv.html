@@ -3,19 +3,29 @@
 {% block content %}
     <div class="row">
         <div class="col-md-12">
-            <!-- here i don't wanna give any style you cna do it yourself as will my point is how to do in PDF  -->
-            <!-- in web it's easy just give some style and that's it. -->
             <h2>{{cv.name}} </h2>
             <h2>{{cv.email}}</h2>
             <h2>{{cv.phone}}</h2>
             <hr>
             <br>
+            <p>Summary</p>
             <p>{{cv.summary}}</p>
-            <p>{{cv.degree}}</p>
-            <p>{{cv.school}}</p>
-            <p>{{cv.university}}</p>
-            <p>{{cv.previous_work}}</p>
+            <hr>
+            <p>Skills</p>
             <p>{{cv.skills}}</p>
+            <hr>
+            <p>Education</p>
+            <ul>
+                <li>
+                    Schooling: {{cv.school}}
+                </li>
+                <li>
+                    {{cv.degree}} from {{cv.university}}
+                </li>
+            </ul>
+            <hr>
+            <p>Previous Work</p>
+            <p>{{cv.previous_work}}</p>
         </div>
     </div>
 {% endblock content %}

@@ -1,0 +1,29 @@
+{% extends 'pdfcv/base.html' %}
+
+{% block title %}
+    Cv lists
+{% endblock title %}
+
+
+{% block content %}
+    <div class="row m-5">
+        <div class="col-md-12">
+            <h2>CV Database list</h2>
+        </div>
+    </div>
+    
+    {% for cv in cv_list %}
+        <div class="row">
+            <div class="col-md-6">
+                {{cv.name}}
+            </div>
+            <div class="col-md-6">
+                <a class="btn btn-success" href="{% url 'web_cv' cv.id %}">Download CV</a>
+            </div>
+        </div>
+        <hr>
+    {% endfor %}
+    
+        
+{% endblock content %}
+    
