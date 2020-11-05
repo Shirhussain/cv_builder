@@ -1,0 +1,22 @@
+{% extends 'pdfcv/base.html' %}
+
+{% block content %}
+    <div class="row">
+        <div class="col-md-12">
+            <!-- here i don't wanna give any style you cna do it yourself as will my point is how to do in PDF  -->
+            <!-- in web it's easy just give some style and that's it. -->
+            <h2>{{cv.name}} </h2>
+            <h2>{{cv.email}}</h2>
+            <h2>{{cv.phone}}</h2>
+            <hr>
+            <br>
+            <p>{{cv.summary}}</p>
+            <p>{{cv.degree}}</p>
+            <p>{{cv.school}}</p>
+            <p>{{cv.university}}</p>
+            <p>{{cv.previous_work}}</p>
+            <p>{{cv.skills}}</p>
+        </div>
+    </div>
+{% endblock content %}
+    
